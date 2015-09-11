@@ -7,7 +7,7 @@
 Note: Numerator and Denominator have to in the minimal form.
       See r3 and r6.
 
-## Constructors:
+## Constructors:///
 - Fraction (): default constructor
 - Fraction (Fraction a): copy constructor
 - Fraction (numerator, denominator)
@@ -23,8 +23,11 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
-2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+   not equal  because when we start main its will call object Fraction(), Fraction(Fraction i), Fraction(int i, int j)
+    and Fraction(int i) first and when it build Fraction r1,r1 will be no.5 of fraction object
 
+2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+   equal because fraction r7 is the fraction that reborn from r3 so the result of fraction r7 and r3 will be equal
 
 ## Expected Output:
 
