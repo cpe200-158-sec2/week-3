@@ -23,8 +23,9 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   -ไม่เท่ากัน  เพราะในการ บวกแต่ละครั้งมีค่ารีเทนติดมาด้วย
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
-
+- ไม่เท่ากัน เพราะ เคส2 ไม่ได้ใช้คำสั่ง new ในการสร้างคลาสข้อมูลขึ้นมา เลยทำให้ เคส1 มากกว่า เคส2
 
 ## Expected Output:
 
