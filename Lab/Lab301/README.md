@@ -1,19 +1,19 @@
 ﻿# Implement the Fraction class according to the following requirements:
 
-## Propeties:
+## Propeties: //done
 - Numer: Numerator
 - Denom: Denominator (default=1, cannot be 0)
 - Count: counting #objects of this class (static)
 Note: Numerator and Denominator have to in the minimal form.
       See r3 and r6.
 
-## Constructors:
-- Fraction (): default constructor
-- Fraction (Fraction a): copy constructor
-- Fraction (numerator, denominator)
+## Constructors: //done
+- Fraction (): default constructor 
+- Fraction (Fraction a): copy constructor 
+- Fraction (numerator, denominator) 
 note: increment the Count property when an object is created
 
-## Methods
+## Methods //done
 - setValue: set fraction value
 - GCD: calculate Greatest Common Divisor of two integers (static)
 
