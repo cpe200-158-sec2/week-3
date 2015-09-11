@@ -23,8 +23,12 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+
+   ไม่เท่า เพราะ รวมกับ การใช้ += ด้วย การใช้+= มีการสร้าง object ขึ้นมาใหม่ ค่า Count จึงเพิ่มขึ้นด้วย
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
 
+	ไม่เหมือน  เพราะ case1 คือการสร้าง object ใหม่ case2 คือการชี้ pointer ไปยัง object r3
 
 ## Expected Output:
 
