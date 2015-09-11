@@ -20,10 +20,15 @@ note: increment the Count property when an object is created
 ## Operator Overloading:
 many many operators need to be overloaded!!! 
 
+Link :: e2fa6fc2f43af8b9ab4737f762dfab398a5f714e
+
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   มีค่าไม่เท่ากันเพราะมันจะบวกไปที่ละหนึ่ง จะเพิ่มตอนที่แม็ดทอดถูกเรียกใช้
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+เคส1สร้าง r7ให้เป็นวัตถุr3ตัวใหม่
+เคส2ไม่เหมือนกันเพราะชี้กันคนละวัตถุ 
 
 
 ## Expected Output:
