@@ -23,7 +23,10 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+	Ans:ไม่เท่า เพราะว่า new ใน class Fraction คือ จำนวนครั้งที่สร้างฟังก์ชั่นขึ้นมาใหม่ของclassนั้น ซึ่งต่างจาก new ใน main ที่เอาไว้สร้าง object เพื่อที่จะ overloading ฟังก์ชันในclass นั้นๆ 
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+	Ans: ไม่เหมือนกัน เพราะ cast#1 คือ การที่r7 ไปสร้าง object ที่มีค่าเท่ากับ r3 กล่าวคือ r7 และ r3 คนละ object กัน เมื่อเปลี่ยนค่าใน r3 ค่าใน r7 ก็จะไม่เปลี่ยน แต่ cast#2 คือ r7 ชี้ที่ object ของ r3 เมื่อ เปลี่ยนค่าของ r3 ส่งผลให้ ค่าของ r7 ก็จะเปลี่ยนไปด้วย
 
 
 ## Expected Output:
