@@ -23,8 +23,12 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
-2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+   (Answer) No it isn't, The number of Fraction is equal to the times that constructor function is being used.
 
+
+2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+	(Answer) No they aren't. In case#1 the fraction r7 is just using r3 properties to initiate it's new self.
+	In case#2, they use operator = which mean both of them are equals to each other.
 
 ## Expected Output:
 
