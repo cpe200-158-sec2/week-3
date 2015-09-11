@@ -6,7 +6,7 @@
 - Count: counting #objects of this class (static)
 Note: Numerator and Denominator have to in the minimal form.
       See r3 and r6.
-
+	  
 ## Constructors:
 - Fraction (): default constructor
 - Fraction (Fraction a): copy constructor
