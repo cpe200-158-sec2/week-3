@@ -1,0 +1,5 @@
+C:\Users\tunas\Source\Repos\week-3\Lab\Lab301\bin\Debug\Lab301.exe
+C:\Users\tunas\Source\Repos\week-3\Lab\Lab301\bin\Debug\Lab301.pdb
+C:\Users\tunas\Source\Repos\week-3\Lab\Lab301\obj\x86\Debug\Lab301.csprojResolveAssemblyReference.cache
+C:\Users\tunas\Source\Repos\week-3\Lab\Lab301\obj\x86\Debug\Lab301.exe
+C:\Users\tunas\Source\Repos\week-3\Lab\Lab301\obj\x86\Debug\Lab301.pdb
