@@ -23,7 +23,10 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+	Answer : ไม่เท่า number of Fraction objects มาจากจำนวนครั้งทั้งหมดที่โปรแกรมสร้าง fraction ขึ้นมาใหม่
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+	Answer:ไม่เท่ากัน เพราะ case1 เป็นการสร้าง fraction r7 ให้มีค่าเท่ากับ r3 แต่ข้อมูลไม่ได้อยู่ตำแหน่งเดียวกัน
+	ถ้าหาก เปลี่ยนค่า r7 ค่า r3 ก็จะไม่เปลี่ยนค่า case2 สร้าง fraction r7 ให้ไปชี้ข้อมูลตำแหน่งเดียวกับ r3 ถ้าหากเราเปลี่ยนค่าใน r7 ค่าใน r3 ก็จะเปลี่ยนด้วย
 
 
 ## Expected Output:
