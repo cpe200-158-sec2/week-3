@@ -23,8 +23,9 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   = ไม่เท่ากัน เพราะในบางfunctionก็มีการเพิ่มobjectอยู่ในfunctionอยู่แล้ว
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
-
+	= ไม่เหมือนกันเพราะcase#1เป็นการสร้างobjectขึ้นมาใหม่ส่วนcase#2ไม่ได้มีการสร้างobjectขึ้นมาใหม่แต่เป็นการชี้ไปที่objectเดิมที่มีอยู่แล้ว
 
 ## Expected Output:
 
