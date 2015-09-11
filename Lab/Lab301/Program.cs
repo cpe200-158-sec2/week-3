@@ -49,7 +49,7 @@ namespace Lab301
 
 			Console.WriteLine("GCD of 3650 and 360: " + Fraction.GCD (3650,360));
 			Console.WriteLine("GCD of 3600 and 360: " + Fraction.GCD (3600,360));
-
-		}
+            Console.ReadKey();
+        }
 	}
 }
