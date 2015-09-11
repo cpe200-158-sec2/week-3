@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab301
 {
     public class Fraction
     {
-
         private int _Numer;
         private int _Denom;
         private static int _Count;
@@ -31,7 +26,13 @@ namespace Lab301
             set { _Count = value; }
         }
 
-        //Constructors
+        public Fraction()
+        {
+            numer = 0;
+            denom = 1;
+            Count++;
+        }
+
         public Fraction(int n)
         {
             numer = n;
@@ -46,10 +47,10 @@ namespace Lab301
             Count++;
         }
 
-        public Fraction(Fraction f)
+        public Fraction(Fraction a)
         {
-            numer = f.numer;
-            denom = f.denom;
+            numer = a.numer;
+            denom = a.denom;
             Count++;
         }
 
@@ -59,6 +60,7 @@ namespace Lab301
             this.denom = b;
             return this;
         }
+
 
         public bool Equals(Fraction a)
         {
@@ -71,15 +73,14 @@ namespace Lab301
             return GCD(b % a, a);
         }
 
-        //Overload
         public static Fraction operator +(Fraction a, Fraction b)
         {
-            return new Fraction((a.numer * b.denom) + (a.denom * b.denom), (a.denom * b.denom))
+            return new Fraction(a.numer * b.denom + a.denom * b.numer, a.denom * b.denom);
         }
 
         public static Fraction operator -(Fraction a, Fraction b)
         {
-            return new Fraction((a.numer * b.denom) - (a.denom * b.denom), (a.denom * b.denom))
+            return new Fraction(a.numer * b.denom - a.denom * b.numer, a.denom * b.denom);
         }
 
         public static Fraction operator ++(Fraction a)
@@ -89,22 +90,22 @@ namespace Lab301
 
         public static Fraction operator +(Fraction a, int b)
         {
-            return new Fraction((a.denom * b) + a.numer, a.denom);
+            return new Fraction(a.denom * b + a.numer, a.denom);
         }
 
         public static Fraction operator +(int a, Fraction b)
         {
-            return new Fraction((a * b.denom) + b.numer, b.denom);
+            return new Fraction(a * b.denom + b.numer, b.denom);
         }
 
         public static Fraction operator -(Fraction a, int b)
         {
-            return new Fraction(a.numer - (b * a.denom), a.denom);
+            return new Fraction(a.numer - b * a.denom, a.denom);
         }
 
         public static Fraction operator -(int a, Fraction b)
         {
-            return new Fraction((a * b.denom) - b.numer, b.denom);
+            return new Fraction(a * b.denom - b.numer, b.denom);
         }
 
         public static bool operator ==(Fraction a, Fraction b)
@@ -121,6 +122,5 @@ namespace Lab301
         {
             return string.Format("[Rational: {0}/{1}], value={2}]", this.numer / GCD(this.numer, this.denom), this.denom / GCD(this.numer, this.denom), (double)this.numer / (double)this.denom);
         }
-
     }
 }

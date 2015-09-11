@@ -23,7 +23,13 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+
+Ans :	No, because they are some fractions that can be made other ways i.e. Fraction r4 and r5.
+		As a result they can be more or equal Fraction objects than the 'new' keywords used. 
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+
+Ans :	Yes, In case 1 r7 a new fraction is created and has value as R3, In case 2 R7 is copied from r3 so they still have the same value (results).
 
 
 ## Expected Output:
