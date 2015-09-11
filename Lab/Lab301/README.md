@@ -1,19 +1,19 @@
 ﻿# Implement the Fraction class according to the following requirements:
 
-## Propeties:
+## Propeties: //done
 - Numer: Numerator
 - Denom: Denominator (default=1, cannot be 0)
 - Count: counting #objects of this class (static)
 Note: Numerator and Denominator have to in the minimal form.
       See r3 and r6.
 
-## Constructors:
-- Fraction (): default constructor
-- Fraction (Fraction a): copy constructor
-- Fraction (numerator, denominator)
+## Constructors: //done
+- Fraction (): default constructor 
+- Fraction (Fraction a): copy constructor 
+- Fraction (numerator, denominator) 
 note: increment the Count property when an object is created
 
-## Methods
+## Methods //done
 - setValue: set fraction value
 - GCD: calculate Greatest Common Divisor of two integers (static)
 
@@ -23,7 +23,13 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+
+Ans :	No, because they are some fractions that can be made other ways i.e. Fraction r4 and r5.
+		As a result they can be more or equal Fraction objects than the 'new' keywords used. 
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+
+Ans :	Yes, In case 1 r7 a new fraction is created and has value as R3, In case 2 R7 is copied from r3 so they still have the same value (results).
 
 
 ## Expected Output:
