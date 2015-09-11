@@ -23,7 +23,10 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   Ans : ไม่เท่ากัน เพราะเมื่อเริ่ม main จะมีการเรียก object Fraction(), Fraction(Fraction i), Fraction(int i, int j) และ Fraction(int i) ขึ้นมาก่อน ดังนั้นตอนที่สร้าง Fraction r1 ขึ้นมา r1 จะเป็น Fraction object ตัวที่ 5
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+   Ans : เท่ากัน เพราะ fraction r7 เป็น fraction ใหม่ที่เกิดจาก r3 ดังนั้นผลลัพธ์ของ fraction r7 กับ fraction r3 มีค่าเท่ากัน
 
 
 ## Expected Output:
