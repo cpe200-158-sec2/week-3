@@ -1,0 +1,5 @@
+E:\GitHub\CPE200\week-3\Lab\Lab301\obj\x86\Debug\Lab301.csprojResolveAssemblyReference.cache
+E:\GitHub\CPE200\week-3\Lab\Lab301\bin\Debug\Lab301.exe
+E:\GitHub\CPE200\week-3\Lab\Lab301\bin\Debug\Lab301.pdb
+E:\GitHub\CPE200\week-3\Lab\Lab301\obj\x86\Debug\Lab301.exe
+E:\GitHub\CPE200\week-3\Lab\Lab301\obj\x86\Debug\Lab301.pdb

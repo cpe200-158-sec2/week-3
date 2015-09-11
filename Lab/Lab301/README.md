@@ -23,7 +23,12 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   
+   = No, it's not equal. Because the number of Fraction object is added when we declare new instance
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+
+   = Yes, because r7 = r3 make r7 and r3 are the same object, and r7 = new Fraction(r3) is copy value to r7
 
 
 ## Expected Output:
