@@ -23,7 +23,9 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   Ans: ไม่เท่ากัน เพราะว่า ในฟังก์ชัน overloading operator ก็มีคำว่า new เหมือนกัน ทำให้ค่าที่ได้ มีค่ามากกว่าคำว่า new ใน main
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+   Ans: ไม่เหมือนกัน คือในเคส 1 เมื่อเปลี่ยนค่า r7 r3จะไม่ถูกเปลี่ยนค่าด้วย เพราะ r7 ชี้object คนละ object กับ r3 แต่ในเคส 2 เมื่อเปลี่ยนค่า r7 r3ก็จะถูกเปลี่ยนค่าด้วย เพราะ r7 ชี้ object เดียวกันกับ r3
 
 
 ## Expected Output:
