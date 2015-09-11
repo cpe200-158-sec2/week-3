@@ -23,8 +23,13 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   
+   =No,it is not. it come from New in operator + , - ,+=,++ (but operator ++ use operator + to help ++ and += too ) 
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
 
+	=No they are not,Because case 1 use "new" to make new object but in case 2 it is use operator = it is not make new object
++	but it tranfer data to another object it made before. 
 
 ## Expected Output:
 
