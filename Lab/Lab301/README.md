@@ -6,7 +6,7 @@
 - Count: counting #objects of this class (static)
 Note: Numerator and Denominator have to in the minimal form.
       See r3 and r6.
-
+	  
 ## Constructors:
 - Fraction (): default constructor
 - Fraction (Fraction a): copy constructor
@@ -23,7 +23,10 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+: ไม่เท่าครับ เพราะว่า จำนวนของแฟรคชันอ๊อบเจคท์ มีค่ามากกว่าจำนวนของคำว่า new ใน main เพราะว่า มีการใช้คำว่า new ของ operator+,- และ ++ ทำให้ค่าไม่เท่ากัน
+
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+: ใช่ครับ เพราะว่า เคส1 r7 ถูกสร้างให้เป็นอ๊อบเจคท์ค่าเท่า r3 เหมือนเดียวกัน ส่วน เคส2 r7 เท่ากับ r3 2ตัวนี้กลายเป็นออบเจ็คท์ค่าเดียวกันจากการก๊อปปี้
 
 
 ## Expected Output:
