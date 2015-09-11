@@ -23,8 +23,12 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+   No, because there are some functions that also construct fraction objects during process more than one time.
+   [In + and - method add another count in each time fucntion is called.]
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
-
+   Both cases give different result. Because case#1, r7 is created at new memory location, thus adding another object count,
+   but case#2, r7 is pointing at the same location as r3 does so there is no constructing method were called.
+      
 
 ## Expected Output:
 
