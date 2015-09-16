@@ -23,8 +23,9 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+    ไม่เท่า เพราะ จำนวนของ fraction object มีค่ามากกว่าจำนวน new ใน main เพราะว่า มีการใช้ new ใน operator
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
-
+    ผลลัพธ์ไม่เท่ากัน เพราะเคสแรก มีการสร้าง Fraction objects ตัวใหม่โดยใช้คำว่า new แต่ในเคสสองเป็นการสั่งให้fraction objects ชี้ไปที่แอดเดรสที่มีค่าเดียวกัน ซึ่งเราสร้างไว้เรียบร้อยแล้ว
 
 ## Expected Output:
 
