@@ -23,8 +23,9 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+Ans ไม่เท่า เพราะว่าเมื่อใช้คำสั่ง + หรือ - ที่ overload ไว้ ก็จะเป็นการสร้าง object อันใหม่ขึ้นมาด้วย จำนวน object ที่ count นับได้จึงมีมากกว่าจำนวน object ที่ใช้ new keyword ใน main
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
-
+Ans ไม่เหมือนกัน ใน case 1 จะเป็นการสร้าง object r7 ใหม่ โดยมีค่าเริ่มต้นเหมือนกับ r3 แต่ใน case2 จะเป็นเหมือนการเพิ่มชื่อเรียก r7 ให้กับ object r3 (เช่น r7+=5 จะมีผลเหมือนกับ r3+=5 ใน case2)
 
 ## Expected Output:
 
