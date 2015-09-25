@@ -1,55 +1,244 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab202
+{
+    class Course
+    {
+        //Properties
+        private string Name;
+        private string CourseID;
+        private string Lecturer;
+        private int MaxStudents;
+        private int NumStudents;
+
+        public string _Name
+        {
+            get { return Name; }
+            set { Name = value; }
+        }
+
+        public string _CourseID //CourseID (6-digit number only)            
+        {
+            get { return CourseID; }
+            set
+            {
+                bool check = true;
+                foreach (char idCourse in _CourseID)
+                {
+                    if (!Char.IsDigit(idCourse))
+                        check = false;
+                }
+                if (value.Length != 6 || check == true) Console.WriteLine("{0}: error try setting invalid CourseID!", CourseID);
+                else CourseID = value;
+            }
+        }
+
+        public string _Lecturer
+        {
+            get { return _Lecturer; }
+            set { Lecturer = value; }
+        }
+
+        public int _MaxStudents //MaxStudents(0-80, and >= NumStudents)
+        {
+            get { return MaxStudents; }
+            set
+            {
+                if (value < NumStudents)
+                    Console.WriteLine("{0}: error try setting invalid Max No. Students!", CourseID);
+                else MaxStudents = value;
+            }
+        }
+
+        public int _NumStudents //NumStudents(0-MaxStudents)
+        {
+            get { return NumStudents; }
+            set
+            {
+                if (value > MaxStudents)
+                    Console.WriteLine("{0}: error try setting invalid No. Students!", CourseID);
+                else NumStudents = value;
+            }
+        }
+
+
+        //Constructors
+        //Course() : set default state
+        public Course()
+        {
+            Name = "Unknow";
+            CourseID = "Unknow";
+            Lecturer = "staff";
+            MaxStudents = 30;
+        }
+        //Course(Name, CourseID): takes 2 parameters
+        public Course(string n, string cid)
+        {
+            Name = n;
+            CourseID = cid;
+            Lecturer = "Staff";
+            MaxStudents = 30;
+        }
+
+        //Course(Name, CourseID, Lecturer): takes 3 parameters
+        public Course(string n, string cid, string lec)
+        {
+            Name = n;
+            CourseID = cid;
+            Lecturer = lec;
+            MaxStudents = 30;
+        }
+        //Course(Name, CourseID, Lecturer, MaxStudents): takes 4 parameters
+        public Course(string n, string cid, string lec, int maxs)
+        {
+            Name = n;
+            CourseID = cid;
+            Lecturer = lec;
+            MaxStudents = maxs;
+        }
+
+        //Methods
+        //ToString(): display object state in specify format (see expected output)
+        public override string ToString()
+        {
+            //[Course: Object-Oriented Programming (261300), Lecturer=staff, has 0 students, max=30]
+            return string.Format("[Course: {0} ({1}), Lecturer={2}, has {3} students, max={4}]", Name, CourseID, Lecturer, NumStudents, MaxStudents);
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Lab301
 {
-	class MainClass
-	{
-		public static void Main (string[] args)
-		{
-			Fraction r1 = new Fraction();
-			Fraction r2 = new Fraction(2);
-			Fraction r3 = new Fraction(3,9);
+    class Fraction
+    {
+        //Properties
 
-			Console.WriteLine ("***** " + Fraction.Count + " Fraction objects have been created *****");
+        //Numer: Numerator
+        private int _Numer;
+        //Denom: Denominator(default=1, cannot be 0)
+        private int _Denom;
+        //Count: counting #objects of this class (static)
+        public static int Count = 0;
 
-			Fraction r4 = r1+r2;
-			Fraction r5 = r2-r3;
-			Fraction r6 = new Fraction(100,50);
-			r6 += r2;
+        public int Numer
+        {
+            get { return _Numer; }
+            set { _Numer = value; }
+        }
 
-			Fraction r7 = new Fraction(r3);		// case#1
-//			Fraction r7 = r3;					// case#2
-			r7++;
+        public int Denom
+        {
+            get { return _Denom; }
+            set
+            {
+                if (value == 0)
+                    _Denom = 1;
+                else _Denom = value;
+            }
+        }
 
-			Console.WriteLine ("***** " + Fraction.Count + " Fraction objects have been created *****");
 
-			Fraction r8 = 10 - (new Fraction(80,40));
-			Fraction r9 = (new Fraction(5,25)) + 1;
+        //Constructors
 
-			Console.WriteLine ("***** " + Fraction.Count + " Fraction objects have been created *****");
+        //Fraction() : default constructor
+        public Fraction()
+        {
+            _Numer = 0;
+            _Denom = 1;
+            Count++;
+        }
+        public Fraction(int numerator)
+        {
+            _Numer = numerator;
+            _Denom = 1;
+            Count++;
+        }
+        //Fraction(Fraction a) : copy constructor
+        public Fraction(Fraction a)
+        {
+            _Numer = a.Numer;
+            _Denom = a.Denom;
+            Count++;
 
-			Console.WriteLine (r1);
-			Console.WriteLine (r2);
-			Console.WriteLine (r3);
-			Console.WriteLine (r4);
-			Console.WriteLine (r5);
-			Console.WriteLine (r6);
-			Console.WriteLine (r7);
-			Console.WriteLine (r8);
-			Console.WriteLine (r9);
+        }
+        //Fraction(numerator, denominator)
+        public Fraction(int numerator, int denominator)
+        {
+            _Numer = numerator;
+            _Denom = denominator;
+            Count++;
+        }
 
-			Console.WriteLine (r2==r4);
-			Console.WriteLine (r4.Equals (r2)); // Equals method must be overriden
-			Console.WriteLine (r2!=r4);
+        //Methods
 
-			r3.setValue (10,12/3*0);
-			Console.WriteLine (r3);
+        //setValue: set fraction value
+        public void setValue(int numerator, int denominator)
+        {
+            _Numer = numerator;
+            if (denominator == 0)
+                _Denom = 1;
+            else
+                _Denom = denominator;
 
-			Console.WriteLine ("***** " + Fraction.Count + " Fraction objects have been created *****");
+        }
+        //GCD: calculate Greatest Common Divisor of two integers(static)
+        public static int GCD(int a, int b)
+        {
+            if (a == 0) return b;
+            return GCD(b % a, a);
+        }
+        public bool Equals(Fraction f1)
+        {
+            return (f1.Numer == Numer && f1.Denom == Denom);
+        }
 
-			Console.WriteLine("GCD of 3650 and 360: " + Fraction.GCD (3650,360));
-			Console.WriteLine("GCD of 3600 and 360: " + Fraction.GCD (3600,360));
+        //[Rational: 0/1], value=0]
+        public override string ToString()
+        {
+            return string.Format("[Rational: {0}/{1}], value={2}]", _Numer / GCD(_Numer, _Denom), _Denom / GCD(_Numer, _Denom), (double)_Numer / _Denom);
+        }
 
-		}
-	}
+        //overloading
+        public static Fraction operator +(Fraction f1, Fraction f2)
+        {
+            return new Fraction(f1.Numer * f2.Denom + f2.Numer * f1.Denom, f1.Denom * f2.Denom);
+        }
+        public static Fraction operator -(Fraction f1, Fraction f2)
+        {
+            return new Fraction(f1.Numer * f2.Denom - f2.Numer * f1.Denom, f1.Denom * f2.Denom);
+        }
+        public static Fraction operator ++(Fraction f)
+        {
+            f.Numer = f.Numer + f.Denom;
+
+            return f;
+        }
+        public static Fraction operator -(int i, Fraction f)
+        {
+            return new Fraction(i * f.Denom - f.Numer, f.Denom);
+        }
+        public static Fraction operator +(Fraction f, int i)
+        {
+            return new Fraction(f.Numer + i * f.Denom, f.Denom);
+        }
+        public static bool operator ==(Fraction f1, Fraction f2)
+        {
+            return (f1.Numer == f2.Numer && f1.Denom == f2.Denom);
+        }
+        public static bool operator !=(Fraction f1, Fraction f2)
+        {
+            return (f1.Numer != f2.Numer || f1.Denom != f2.Denom);
+        }
+
+    }
 }
