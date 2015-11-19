@@ -23,7 +23,9 @@ many many operators need to be overloaded!!!
 ## Question?
 1. Is the number of Fraction objects equal to the 'new' keywords used
    in the 'main' methods? How come?
+      : ไม่เท่ากัน เราจะเห็นได้ว่า จำนวนของ Fraction objects มีค่ามากกว่าจำนวนของคำว่า new ใน main เพราะว่า มีการใช้คำว่า new ใน operator overloading +,- และ ++ โดยค่า Fraction objects จะเท่ากับ จำนวนคำว่า new ใน main และ ใน operator overloading ของ class Fraction
 2. Are the result, r3 and r7, in case#1 and case#2 the same? Why?
+      : ได้ผลลัพธ์ของค่า Fraction objects ไม่เท่ากัน เพราะว่า ใน case#1 เนื่องจากมีการสร้าง Fraction objects ตัวใหม่โดยใช่คำว่า new แต่ ใน case#2 เป็นการทำให้ค่า Fraction objects ชี้ไปที่แอนเดรสเดียวกับค่า Fraction objectsที่เราเคยสร้างไว้แล้ว
 
 
 ## Expected Output:
